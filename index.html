@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Dashboard Bot PPLG X-3</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login" class="login hidden">
+  <form id="loginForm" class="login-box">
+    <h1>Bot PPLG X-3</h1>
+    <p class="muted">Masukkan password dashboard untuk melanjutkan.</p>
+    <label>Password
+      <input id="pw" type="password" autocomplete="current-password" required>
+    </label>
+    <button class="btn primary" type="submit">Masuk</button>
+    <p id="loginErr" class="err" role="alert"></p>
+  </form>
+</div>
+
+<div id="app" class="app hidden">
+  <nav id="nav" aria-label="Menu dashboard"></nav>
+  <main id="view"></main>
+</div>
+
+<dialog id="modal">
+  <form id="mForm">
+    <h2 id="mTitle"></h2>
+    <div id="mBody"></div>
+    <div class="row end">
+      <button type="button" class="btn" id="mCancel">Batal</button>
+      <button type="submit" class="btn primary">Simpan</button>
+    </div>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
